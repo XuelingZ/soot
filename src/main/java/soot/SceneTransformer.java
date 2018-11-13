@@ -32,12 +32,13 @@ public abstract class SceneTransformer extends Transformer {
     if (!PhaseOptions.getBoolean(options, "enabled")) {
       return;
     }
-    System.out.println("DEBUG============= phaseName: " + phaseName);
+    System.out.println("DEBUG=============SceneTransform.transform(),phaseName: " + phaseName);
     internalTransform(phaseName, options);
   }
 
   public final void transform(String phaseName) {
     HashMap<String, String> dummyOptions = new HashMap<String, String>();
+    System.out.println("DEBUG============= SceneTransform.transform()" + phaseName);
     dummyOptions.put("enabled", "true");
     transform(phaseName, dummyOptions);
   }

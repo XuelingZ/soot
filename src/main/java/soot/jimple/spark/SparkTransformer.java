@@ -85,6 +85,7 @@ public class SparkTransformer extends SceneTransformer {
   }
 
   protected void internalTransform(String phaseName, Map<String, String> options) {
+	System.out.println("DEBUG=============SparkTransform.internalTransform(),phaseName: " + phaseName);
     SparkOptions opts = new SparkOptions(options);
     final String output_dir = SourceLocator.v().getOutputDir();
 
