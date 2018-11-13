@@ -40,8 +40,9 @@ public class RadioScenePack extends ScenePack {
   }
 
   protected void internalApply() {
+	  System.out.println("DEBUG========== Soot.RadioScencePack.internalApply()");
     LinkedList<Transform> enableds = new LinkedList<Transform>();
-
+    
     for (Iterator<Transform> tIt = this.iterator(); tIt.hasNext();) {
 
       final Transform t = tIt.next();
@@ -51,6 +52,7 @@ public class RadioScenePack extends ScenePack {
       }
       enableds.add(t);
     }
+    System.out.println("DEBUG========== enableds.size() = " + enableds.size());
     if (enableds.size() == 0) {
       logger
           .debug("" + "Exactly one phase in the pack " + getPhaseName() + " must be enabled. Currently, none of them are.");

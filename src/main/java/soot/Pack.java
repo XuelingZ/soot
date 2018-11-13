@@ -110,11 +110,16 @@ public abstract class Pack implements HasPhaseOptions, Iterable<Transform> {
   }
 
   public final void apply() {
+	//  System.out.println("DEBUG==========" + "In apply()");
     Map<String, String> options = PhaseOptions.v().getPhaseOptions(this);
     if (!PhaseOptions.getBoolean(options, "enabled")) {
+   // 	System.out.println("DEBUG==========" + "In appy() if");
       return;
     }
+ //   System.out.println("DEBUG==========" + "In apply(), before internalApply()");
     internalApply();
+//  System.out.println("DEBUG==========" + "In apply(), after internalApply()");
+    
   }
 
   public final void apply(Body b) {

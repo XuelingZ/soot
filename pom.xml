@@ -47,6 +47,7 @@
                 <version>${xml-maven-plugin.version}</version>
                 <executions>
                     <execution>
+                        <phase>initialize-build</phase>
                         <goals>
                             <goal>transform</goal>
                         </goals>

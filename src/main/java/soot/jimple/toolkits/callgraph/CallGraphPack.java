@@ -43,7 +43,11 @@ public class CallGraphPack extends RadioScenePack {
   }
 
   protected void internalApply() {
+	System.out.println("DEBUG==========" + "CallGraphPack.internalApply()");
     CGOptions options = new CGOptions(PhaseOptions.v().getPhaseOptions(this));
+	System.out.println("DEBUG=========  Scene.v().hasCustomEntryPoints(): " + Scene.v().hasCustomEntryPoints());
+	System.out.println("DEBUG=========  options.implicit_entry(): " + options.implicit_entry());
+	System.out.println("DEBUG=========  options.all_reachable(): " + options.all_reachable());
     if (!Scene.v().hasCustomEntryPoints()) {
       if (!options.implicit_entry()) {
         Scene.v().setEntryPoints(EntryPoints.v().application());

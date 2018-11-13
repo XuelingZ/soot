@@ -32,7 +32,7 @@ public abstract class SceneTransformer extends Transformer {
     if (!PhaseOptions.getBoolean(options, "enabled")) {
       return;
     }
-
+    System.out.println("DEBUG============= phaseName: " + phaseName);
     internalTransform(phaseName, options);
   }
 

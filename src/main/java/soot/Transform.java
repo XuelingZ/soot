@@ -89,6 +89,7 @@ public class Transform implements HasPhaseOptions {
   }
 
   public void apply() {
+	System.out.println("DEBUG=============== Soot.Transform.apply()");
     Map<String, String> options = PhaseOptions.v().getPhaseOptions(phaseName);
     if (PhaseOptions.getBoolean(options, "enabled")) {
       if (Options.v().verbose()) {
